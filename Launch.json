@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C/C++: gcc.exe compilar e executar arquivo ativo",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",  // Caminho para o arquivo .exe gerado
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": true,  // Manter o terminal aberto após execução
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Ativar exibição do código-fonte no GDB",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",  // Caminho para o GDB se você usar MinGW
+            "preLaunchTask": "C/C++: gcc.exe build active file",  // Nome da tarefa de compilação
+            "visualizerFile": "${fileDirname}\\${fileBasenameNoExtension}.exe"
+        }
+    ]
+}
